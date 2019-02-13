@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private let selectNumberView: EWSelectNumberView = EWSelectNumberView(frame: CGRect(x: 100, y: 300, width: 96, height: 24))
+    private let selectNumberView: EWSelectNumberView = EWSelectNumberView(frame: CGRect(x: 100, y: 300, width: 96, height: 24), defaultNumber: 99, maxNumber: 100)
 
     override func viewDidLoad() {
         super.viewDidLoad()
