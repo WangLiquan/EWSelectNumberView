@@ -14,6 +14,7 @@
 		79EB767922140BB00046E450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EB767722140BB00046E450 /* LaunchScreen.storyboard */; };
 		79EB768422140BB00046E450 /* EWSelectNumberViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB768322140BB00046E450 /* EWSelectNumberViewTests.swift */; };
 		79EB768F22140BB00046E450 /* EWSelectNumberViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB768E22140BB00046E450 /* EWSelectNumberViewUITests.swift */; };
+		79EB769F22140D700046E450 /* EWSelectNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB769E22140D700046E450 /* EWSelectNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		79EB768A22140BB00046E450 /* EWSelectNumberViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWSelectNumberViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EB768E22140BB00046E450 /* EWSelectNumberViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWSelectNumberViewUITests.swift; sourceTree = "<group>"; };
 		79EB769022140BB00046E450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79EB769E22140D700046E450 /* EWSelectNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWSelectNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				79EB766E22140BAE0046E450 /* AppDelegate.swift */,
 				79EB767022140BAE0046E450 /* ViewController.swift */,
+				79EB769E22140D700046E450 /* EWSelectNumberView.swift */,
 				79EB767222140BAE0046E450 /* Main.storyboard */,
 				79EB767522140BB00046E450 /* Assets.xcassets */,
 				79EB767722140BB00046E450 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				79EB767122140BAE0046E450 /* ViewController.swift in Sources */,
 				79EB766F22140BAE0046E450 /* AppDelegate.swift in Sources */,
+				79EB769F22140D700046E450 /* EWSelectNumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

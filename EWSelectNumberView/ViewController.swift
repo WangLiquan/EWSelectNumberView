@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let selectNumberView: EWSelectNumberView = EWSelectNumberView(frame: CGRect(x: 100, y: 300, width: 96, height: 24))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(selectNumberView)
     }
 
 
