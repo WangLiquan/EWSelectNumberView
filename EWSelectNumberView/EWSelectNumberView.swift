@@ -11,15 +11,21 @@ import UIKit
 class EWSelectNumberView: UIView {
     /// 修改数量回调,减回调false,加回调true
     public var backEditNumber: ((Bool) -> ())?
-    public var maxSelectNumber: Int = 99
+    private var maxSelectNumber: Int = 99
     /// 选择数量,public,外部可调用
-    public var selectedNumber: Int = 1{
+    private var _selectedNumber: Int = 1{
         didSet{
-            self.subtractButton.isEnabled = selectedNumber == 1 ? false : true
-            self.addButton.isEnabled = selectedNumber == maxSelectNumber ? false : true
-            self.showLabel.text = "\(selectedNumber)"
+            self.subtractButton.isEnabled = _selectedNumber == 1 ? false : true
+            self.addButton.isEnabled = _selectedNumber == maxSelectNumber ? false : true
+            self.showLabel.text = "\(_selectedNumber)"
         }
     }
+    var selectedNumber: Int{
+        get {
+            return _selectedNumber
+        }
+    }
+
     private let subtractButton: UIButton = {
         let button = UIButton()
         button.isEnabled = false
@@ -32,7 +38,7 @@ class EWSelectNumberView: UIView {
         let label = UILabel()
         label.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
         label.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-        label.text = "\(selectedNumber)"
+        label.text = "\(_selectedNumber)"
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .center
         return label
@@ -60,7 +66,7 @@ class EWSelectNumberView: UIView {
         guard let selectedNumber = value as? Int else {
             return
         }
-        self.selectedNumber = selectedNumber
+        self._selectedNumber = selectedNumber
     }
 
     private func drawMyView(){
@@ -77,12 +83,12 @@ class EWSelectNumberView: UIView {
     @objc private func onClickChangeButton(sender: UIButton) {
         switch sender.tag {
         case 0:
-            self.selectedNumber -= 1
+            self._selectedNumber -= 1
             if backEditNumber != nil {
                 backEditNumber!(false)
             }
         case 1:
-            self.selectedNumber += 1
+            self._selectedNumber += 1
             if backEditNumber != nil {
                 backEditNumber!(true)
             }

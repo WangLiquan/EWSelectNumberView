@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79E4877C22151CEC00E61527 /* EWToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E4877B22151CEC00E61527 /* EWToast.swift */; };
 		79EB766F22140BAE0046E450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB766E22140BAE0046E450 /* AppDelegate.swift */; };
 		79EB767122140BAE0046E450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB767022140BAE0046E450 /* ViewController.swift */; };
 		79EB767422140BAE0046E450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EB767222140BAE0046E450 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79E4877B22151CEC00E61527 /* EWToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWToast.swift; sourceTree = "<group>"; };
 		79EB766B22140BAE0046E450 /* EWSelectNumberView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EWSelectNumberView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EB766E22140BAE0046E450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EB767022140BAE0046E450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		79EB766D22140BAE0046E450 /* EWSelectNumberView */ = {
 			isa = PBXGroup;
 			children = (
+				79E4877B22151CEC00E61527 /* EWToast.swift */,
 				79EB766E22140BAE0046E450 /* AppDelegate.swift */,
 				79EB767022140BAE0046E450 /* ViewController.swift */,
 				79EB769E22140D700046E450 /* EWSelectNumberView.swift */,
@@ -262,6 +265,7 @@
 				79EB767122140BAE0046E450 /* ViewController.swift in Sources */,
 				79EB766F22140BAE0046E450 /* AppDelegate.swift in Sources */,
 				79EB769F22140D700046E450 /* EWSelectNumberView.swift in Sources */,
+				79E4877C22151CEC00E61527 /* EWToast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
