@@ -11,21 +11,24 @@ import UIKit
 class EWSelectNumberView: UIView {
     /// 修改数量回调,减回调false,加回调true
     public var backEditNumber: ((Bool) -> ())?
+    /// 最大显示数,可以通过初始化设置
     private var maxSelectNumber: Int = 99
-    /// 选择数量,public,外部可调用
+    /// 选择数量,private,外部不可调用
     private var _selectedNumber: Int = 1{
+        /// 当选择数量修改时进行显示label的文字修改,以及加减按钮的状态修改.
         didSet{
             self.subtractButton.isEnabled = _selectedNumber == 1 ? false : true
             self.addButton.isEnabled = _selectedNumber == maxSelectNumber ? false : true
             self.showLabel.text = "\(_selectedNumber)"
         }
     }
-    var selectedNumber: Int{
+    /// 外部调用当前显示数量,只读,不可修改.防止异常
+    public var selectedNumber: Int{
         get {
             return _selectedNumber
         }
     }
-
+    /// 左侧减按钮
     private let subtractButton: UIButton = {
         let button = UIButton()
         button.isEnabled = false
@@ -34,6 +37,7 @@ class EWSelectNumberView: UIView {
         button.setBackgroundImage(UIImage(named: "selectNumber_subtractIsEnableFalse"), for: .disabled)
         return button
     }()
+    /// 中间显示label
     private lazy var showLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
@@ -43,6 +47,7 @@ class EWSelectNumberView: UIView {
         label.textAlignment = .center
         return label
     }()
+    /// 右侧加按钮
     private let addButton: UIButton = {
         let button = UIButton()
         button.tag = 1
@@ -52,6 +57,7 @@ class EWSelectNumberView: UIView {
     }()
 
     init(frame: CGRect, defaultNumber: Int = 1, maxNumber: Int = 99){
+        /// 加入frame限制,保证按钮size小于view.width*1/3,保证显示效果
         let frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: frame.height < frame.width/3 ? frame.height : frame.width/3)
         super.init(frame: frame)
         self.maxSelectNumber = maxNumber
@@ -80,6 +86,7 @@ class EWSelectNumberView: UIView {
         self.addSubview(showLabel)
         showLabel.frame = CGRect(x: buttonWidth, y: 0, width: self.frame.width - buttonWidth * 2, height: buttonWidth)
     }
+    /// 点击加减按钮
     @objc private func onClickChangeButton(sender: UIButton) {
         switch sender.tag {
         case 0:
