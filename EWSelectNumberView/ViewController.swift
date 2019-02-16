@@ -66,6 +66,4 @@ class ViewController: UIViewController {
         self.view.addSubview(selectNumberView3)
     }
 
-
 }
-
