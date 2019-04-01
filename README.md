@@ -1,5 +1,7 @@
 # EWSelectNumberView
-<h4>自定制的数量加减View.可用于购物车,商品页等等</h4>
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+自定制的数量加减View.可用于购物车,商品页等等
 
 # 实现效果:
 * frame可自定义,进行了适配.注意点在于为了保证显示效果,view.height不能小于view.width/3.
